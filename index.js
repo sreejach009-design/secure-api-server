@@ -51,6 +51,11 @@ app.get('/health', (req, res) => {
     res.json({ status: 'ok', timestamp: new Date() });
 });
 
+// Root route
+app.get('/', (req, res) => {
+    res.send('Secure API Server is running successfully.');
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
