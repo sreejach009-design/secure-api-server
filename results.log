@@ -1,0 +1,61 @@
+
+--- Testing Auth ---
+Register status: 200
+Login status: 200
+Token acquired
+
+--- Testing Credentials ---
+Create Credential status: 200
+API Key: sk_bab07e8c7b5449f29dc71034c2ad7155
+List Credentials status: 200
+Rotate Key status: 200
+New API Key: sk_0ccc2ac2c4214ed98e045f8c9671ea23
+
+--- Testing Usage & Simulation ---
+Simulate status: 200
+Simulate response: API call successful
+Testing Groq Integration...
+Groq Simulate status: 200
+Groq Response (Full): {
+  "id": "chatcmpl-016c80e4-2e6a-4239-86ed-9ddf0cefd7df",
+  "object": "chat.completion",
+  "created": 1773128062,
+  "model": "llama-3.3-70b-versatile",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "The capital of France is Paris."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "queue_time": 0.160089439,
+    "prompt_tokens": 44,
+    "prompt_time": 0.00597006,
+    "completion_tokens": 8,
+    "completion_time": 0.01217604,
+    "total_tokens": 52,
+    "total_time": 0.0181461
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_45180df409",
+  "x_groq": {
+    "id": "req_01kkbap51pf6rb85zqedz5dfge",
+    "seed": 1503434968
+  },
+  "service_tier": "on_demand"
+}
+Groq Response Content: The capital of France is Paris.
+Get Stats status: 200
+Testing Security Alert Generation...
+Inactive Sim status (expected 401): 401
+
+--- Testing Security Alerts ---
+List Alerts status: 200
+Alerts count: 1
+
+--- Tests Completed ---
